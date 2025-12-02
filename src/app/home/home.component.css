@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: up;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+
+    background-image: url('/assets/penguin.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,26 @@
+<h2 style="text-align:center; margin-bottom:20px; color:#333;">Agregar Nueva Marca</h2>
+
+<div style="display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; background-color:#f0f0f0;">
+  <form (ngSubmit)="agregarMarca()"
+        style="background-color:white; padding:30px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); width:100%; max-width:400px;">
+
+    <div style="margin-bottom:25px;">
+      <label style="display:block; margin-bottom:8px; font-weight:bold; color:#333;">Nombre</label>
+      <input [(ngModel)]="marca.nombre" name="nombre" type="text" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;" required>
+    </div>
+
+    <div style="margin-bottom:25px;">
+      <label style="display:block; margin-bottom:8px; font-weight:bold; color:#333;">Email</label>
+      <input [(ngModel)]="marca.email" name="email" type="email" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;" required>
+    </div>
+
+    <div style="margin-bottom:25px;">
+      <label style="display:block; margin-bottom:8px; font-weight:bold; color:#333;">Teléfono</label>
+      <input [(ngModel)]="marca.numeroTelefono" name="telefono" type="text" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;" required>
+    </div>
+
+    <button type="submit" style="width:100%; padding:12px; background-color:#000; color:white; border:none; border-radius:4px; cursor:pointer; font-size:16px;">
+      Agregar Marca
+    </button>
+  </form>
+</div>

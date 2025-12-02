@@ -1,0 +1,21 @@
+<h2>Lista de Refrigeradores</h2>
+
+<div class="refrigeradores-container">
+  <div class="card" *ngFor="let refrigerador of refrigeradores">
+    <img [src]="refrigerador.imagenUrl" class="card-img-top" alt="Imagen de {{refrigerador.modelo}}">
+    <div class="card-body">
+      <h5 class="card-title">{{ refrigerador.modelo }}</h5>
+      <p class="card-text">
+        Color: {{ refrigerador.color }}<br>
+        Precio: ${{ refrigerador.precio }}<br>
+        Marca: {{ refrigerador.marca?.nombre || 'Desconocida' }}
+      </p>
+      <button [routerLink]="['/editar-refrigerador', refrigerador.id]" class="btn btn-primary btn-sm">Editar</button>
+      <button (click)="deleteRefrigerador(refrigerador.id)" class="btn btn-danger btn-sm">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+
+
+
